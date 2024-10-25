@@ -12,12 +12,12 @@ class TokenNoFoundException(HTTPException):
 
 
 UserAlreadyExistsException = HTTPException(status_code=status.HTTP_409_CONFLICT,
-                                           detail="User already exists")
+                                           detail=[{"msg": "User already exists"}])
 
-PasswordMismatchException = HTTPException(status_code=status.HTTP_409_CONFLICT, detail="The passwords don't match!")
+PasswordMismatchException = HTTPException(status_code=status.HTTP_409_CONFLICT, detail=[{"msg": "Passwords don't match!"}])
 
 IncorrectEmailOrPasswordException = HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
-                                                  detail="Wrong email or password")
+                                                  detail=[{"msg": "Wrong email or password"}])
 
 NoJwtException = HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                                detail="The token is not valid")
