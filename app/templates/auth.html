@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='styles/auth.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="tabs">
+        <div class="tab active" data-tab="login">Authorization</div>
+        <div class="tab" data-tab="register">Registration</div>
+    </div>
+    <div class="content">
+        <form id="loginForm" class="form active">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button id="loginButton" type="submit">Login</button>
+        </form>
+        <form id="registerForm" class="form">
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Name" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button id="registerButton" type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<script src="{{ url_for('static', path='js/auth.js') }}"></script>
+</body>
+</html>
