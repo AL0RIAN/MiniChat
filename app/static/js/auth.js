@@ -29,7 +29,7 @@ const sendRequest = async (url, data) => {
         const result = await response.json();
 
         if (response.ok) {
-            // alert(result.message || 'Operation completed successfully!');
+            alert(result.message || 'Operation completed successfully!');
             return result;
         } else {
             let container = document.getElementsByClassName('container')[0];
