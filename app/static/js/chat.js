@@ -27,7 +27,7 @@ function scrollToBottom() {
 
 async function selectUser(userId, userName, event) {
     selectedUserId = userId;
-    document.getElementById("chatHeader").innerHTML = `<span>${userName}</span><button class="logout-button" id="logoutButton">Выход</button>`;
+    document.getElementById("chatHeader").innerHTML = `<span>${userName}</span><button class="logout-button" id="logoutButton">Logout</button>`;
     document.getElementById("messageInput").disabled = false;
     document.getElementById("sendButton").disabled = false;
 
